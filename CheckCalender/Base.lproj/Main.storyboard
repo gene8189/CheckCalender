@@ -35,8 +35,11 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="siw-PP-p3N">
-                                <rect key="frame" x="340" y="705" width="64" height="64"/>
+                                <rect key="frame" x="276" y="641" width="128" height="128"/>
                                 <state key="normal" image="Plus"/>
+                                <connections>
+                                    <segue destination="JOh-o9-LLv" kind="show" id="cvP-N6-pPB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,7 +60,70 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZt-yE-dTW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-179.71014492753625" y="756.69642857142856"/>
+            <point key="canvasLocation" x="-390" y="757"/>
+        </scene>
+        <!--Add Task View Controller-->
+        <scene sceneID="SZX-Qr-tgd">
+            <objects>
+                <viewController id="JOh-o9-LLv" customClass="AddTaskViewController" customModule="CheckCalender" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AR4-9V-LUr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Set a Date" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P0u-M3-LmO">
+                                <rect key="frame" x="20" y="130" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b7D-Ad-eMz">
+                                <rect key="frame" x="20" y="75" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Task title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eil-18-WIq">
+                                <rect key="frame" x="20" y="20" width="374" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="joc-7t-JCe">
+                                <rect key="frame" x="20" y="704" width="374" height="50"/>
+                                <color key="backgroundColor" red="0.1174011603" green="0.50222086909999997" blue="0.4639606476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="gXk-od-aZt"/>
+                                    <constraint firstAttribute="height" constant="50" id="hbg-GI-1JA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="19"/>
+                                <state key="normal" title="Save">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveButtonPressed:" destination="JOh-o9-LLv" eventType="touchUpInside" id="nM9-34-xUz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="joc-7t-JCe" firstAttribute="leading" secondItem="HeY-9A-8iN" secondAttribute="leading" constant="20" id="Pw9-4T-9gk"/>
+                            <constraint firstItem="HeY-9A-8iN" firstAttribute="trailing" secondItem="joc-7t-JCe" secondAttribute="trailing" constant="20" id="oc4-1T-F3G"/>
+                            <constraint firstItem="HeY-9A-8iN" firstAttribute="bottom" secondItem="joc-7t-JCe" secondAttribute="bottom" constant="20" id="rKb-E3-qVA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="HeY-9A-8iN"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="wzA-CC-vsq">
+                        <barButtonItem key="leftBarButtonItem" image="Close" id="de2-w3-iPt">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="closeButtonPressed:" destination="JOh-o9-LLv" id="FFT-8O-9vr"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tjC-LY-cc4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="756"/>
         </scene>
         <!--Calender View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -198,6 +264,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Close" width="16" height="16"/>
         <image name="Plus" width="64" height="64"/>
     </resources>
 </document>

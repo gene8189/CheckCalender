@@ -16,6 +16,9 @@
 		B03AA99E23B8C5F8002B19FB /* CalenderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03AA99D23B8C5F8002B19FB /* CalenderViewCell.swift */; };
 		B03AA9A023B8C60E002B19FB /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03AA99F23B8C60E002B19FB /* CalenderViewController.swift */; };
 		B03AA9A223B8CDDD002B19FB /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B03AA9A123B8CDDD002B19FB /* ListViewController.swift */; };
+		B0DE198E23B8EE400003DF55 /* AddTaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE198D23B8EE400003DF55 /* AddTaskViewController.swift */; };
+		B0DE199023B8F0DE0003DF55 /* HudView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE198F23B8F0DE0003DF55 /* HudView.swift */; };
+		B0DE199223B8F6110003DF55 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0DE199123B8F6110003DF55 /* Functions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,9 @@
 		B03AA99D23B8C5F8002B19FB /* CalenderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewCell.swift; sourceTree = "<group>"; };
 		B03AA99F23B8C60E002B19FB /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
 		B03AA9A123B8CDDD002B19FB /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		B0DE198D23B8EE400003DF55 /* AddTaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTaskViewController.swift; sourceTree = "<group>"; };
+		B0DE198F23B8F0DE0003DF55 /* HudView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HudView.swift; sourceTree = "<group>"; };
+		B0DE199123B8F6110003DF55 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +72,9 @@
 				B03AA98823B8C405002B19FB /* SceneDelegate.swift */,
 				B03AA98C23B8C405002B19FB /* Main.storyboard */,
 				B03AA9A123B8CDDD002B19FB /* ListViewController.swift */,
+				B0DE198D23B8EE400003DF55 /* AddTaskViewController.swift */,
+				B0DE199123B8F6110003DF55 /* Functions.swift */,
+				B0DE198F23B8F0DE0003DF55 /* HudView.swift */,
 				B03AA99D23B8C5F8002B19FB /* CalenderViewCell.swift */,
 				B03AA99F23B8C60E002B19FB /* CalenderViewController.swift */,
 				B03AA99223B8C406002B19FB /* Assets.xcassets */,
@@ -149,10 +158,13 @@
 			files = (
 				B03AA9A023B8C60E002B19FB /* CalenderViewController.swift in Sources */,
 				B03AA99E23B8C5F8002B19FB /* CalenderViewCell.swift in Sources */,
+				B0DE199223B8F6110003DF55 /* Functions.swift in Sources */,
 				B03AA9A223B8CDDD002B19FB /* ListViewController.swift in Sources */,
 				B03AA98723B8C405002B19FB /* AppDelegate.swift in Sources */,
+				B0DE199023B8F0DE0003DF55 /* HudView.swift in Sources */,
 				B03AA99123B8C405002B19FB /* CheckCalender.xcdatamodeld in Sources */,
 				B03AA98923B8C405002B19FB /* SceneDelegate.swift in Sources */,
+				B0DE198E23B8EE400003DF55 /* AddTaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
