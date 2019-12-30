@@ -8,11 +8,14 @@
 
 import UIKit
 
-class AddTaskViewController: UIViewController {
-
+class AddTaskViewController: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var taskTitleTextField: UITextField!
+    @IBOutlet weak var setDateTextField: UITextField!
+    @IBOutlet weak var setTimeTextField: UITextField!
+    let timePicker = UIDatePicker()
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
     
@@ -31,14 +34,48 @@ class AddTaskViewController: UIViewController {
     @IBAction func closeButtonPressed(_ sender: Any) {
         navigationController?.popViewController(animated: true)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        if textField == setTimeTextField {
+           showTimePicker()
+        } else if textField == setDateTextField {
+            performSegue(withIdentifier: "selectDateSegue", sender: nil)
+            disablesAutomaticKeyboardDismissal
+        } else {
+//            textField.resignFirstResponder()
+            print("close keyboard")
+        }
     }
-    */
+    
+    @objc func test() {
+        print("it work")
+    }
+    
+    func showTimePicker() {
+        timePicker.datePickerMode = .time
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneTimePicker))
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: .plain, target: self, action: #selector(cancelTimePicker))
+        
+        toolbar.setItems([doneButton,cancelButton], animated: false)
+        
+        setTimeTextField.inputAccessoryView = toolbar
+        setTimeTextField.inputView = timePicker
+    }
+    
+    
+    @objc func doneTimePicker() {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "hh:mm a"
+        let time = timePicker.date
+        setTimeTextField.text = formatter.string(from: time)
+        view.endEditing(true)
+    }
+    
+    @objc func cancelTimePicker() {
+        self.view.endEditing(true)
+    }
+    
 
 }

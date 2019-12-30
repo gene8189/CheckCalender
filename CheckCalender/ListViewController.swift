@@ -31,6 +31,15 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let controller = segue.destination as! AddTaskViewController
+        if segue.identifier == "addTaskSegue" {
+            controller.title = "Add new task"
+        } else if segue.identifier == "editTaskSegue" {
+            controller.title = "Edit task"
+        }
+    }
+    
     
     
     
